@@ -14,6 +14,7 @@ public class ImageEditor {
 
         //  Put everything in a string
         String fileString = "";
+        
         while(scin.hasNext()){
             String n = scin.next();
             if(n.charAt(0) == '#') {
