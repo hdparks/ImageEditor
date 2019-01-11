@@ -6,7 +6,4 @@ public class Pixel {
         this.b = b;
     }
 
-    public String toString(){
-        return this.r + " " + this.g + " " + this.b;
-    }
 }
