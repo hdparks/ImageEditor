@@ -107,8 +107,8 @@ public class PPMImage {
         //  Work from bottom right across, then up the rows
         for (int i = this.height - 1; i > 0; i--){
             for (int j = this.width - 1; j > 0; j--){
-                Pixel p = image[i][j];
-                Pixel o = image[i-1][j-1];
+                Pixel p = this.pixels[i][j];
+                Pixel o = this.pixels[i-1][j-1];
 
                 int rdiff = p.r - o.r;
                 int gdiff = p.g - o.g;
