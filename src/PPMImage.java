@@ -28,7 +28,7 @@ public class PPMImage {
 
         //  Initialize pixel array
         this.pixels = new Pixel[this.width * this.height];
-        
+
         //  Populate pixel array
         int i = 0;
         while(scin.hasNext()){
@@ -74,6 +74,7 @@ public class PPMImage {
         //  Close Writer
         out.close();
     }
+
 
 
 }
