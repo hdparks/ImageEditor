@@ -9,10 +9,11 @@ public class ImageEditor {
         //  Validate command line arguments
         if (args.length != 3){
             //  Not three arguments
-            if (args.length != 4 || args[2] != "motionblur" || !args[3].matches("-?\\d")){
+            if (args.length != 4 || !args[2].equals("motionblur")|| Integer.parseInt(args[3]) <= 0){
                 // If there not exactly 4, or
                 // If not "motionblur", or
                 // If not an int for motionblurlength, return Usage statement
+
                 System.out.println("USAGE: java ImageEditor in-file out-file (grayscale|invert|emboss|motionblur motion-blur-length)");
                 return;
             }
@@ -22,7 +23,7 @@ public class ImageEditor {
 
             //  Third value must be in this list
             String[] values = {"grayscale","invert","emboss"};
-            boolean contains = Arrays.stream(values).anyMatch(args[2]::equals);
+            boolean contains = Arrays.asList(values).contains(args[2]);
 
             if (!contains){
                 //   If not one of the list items, return Usage statement
