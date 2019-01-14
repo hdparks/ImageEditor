@@ -45,6 +45,7 @@ public class PPMImage {
                 j++;
             }
         }
+        scin.close();
     }
 
     public void exportPPM(String filename) throws IOException {
@@ -173,9 +174,9 @@ public class PPMImage {
                     i += 1;
                 }
 
-                this.pixels[y][x].r = Math.round((float)rtot / i);
-                this.pixels[y][x].g = Math.round((float)gtot / i);
-                this.pixels[y][x].b = Math.round((float)btot / i);
+                this.pixels[y][x].r = rtot / i;
+                this.pixels[y][x].g = gtot / i;
+                this.pixels[y][x].b = btot / i;
             }
         }
         return;
