@@ -115,7 +115,7 @@ public class PPMImage {
                 int gdiff = p.g - o.g;
                 int bdiff = p.b - o.b;
 
-                int max = Math.max(Math.max(rdiff,gdiff),bdiff);
+                int max = Math.max(Math.max(Math.abs(rdiff),Math.abs(gdiff)),Math.abs(bdiff));
 
                 int v;
 
@@ -166,7 +166,7 @@ public class PPMImage {
                 int btot = 0;
                 int i = 0;
 
-                for (int c = x; c < x + blurLength - 1 && c < this.width; c++){
+                for (int c = x; c < x + blurLength && c < this.width; c++){
                     rtot += this.pixels[y][c].r;
                     gtot += this.pixels[y][c].g;
                     btot += this.pixels[y][c].b;
